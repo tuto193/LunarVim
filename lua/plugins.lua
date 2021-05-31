@@ -78,6 +78,8 @@ return require("packer").startup(function(use)
 
     -- Color
     use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
+    use 'tanvirtin/monokai.nvim'
+    use 'sainnhe/sonokai'
 
     -- Icons
     use {"kyazdani42/nvim-web-devicons", opt = true}
