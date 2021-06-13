@@ -81,6 +81,10 @@ return require("packer").startup(function(use)
     use 'tanvirtin/monokai.nvim'
     use 'sainnhe/sonokai'
 
+    -- GDScript Support
+    use 'sheerun/vim-polyglot'
+    use 'calviken/vim-gdscript3'
+
     -- Icons
     use {"kyazdani42/nvim-web-devicons", opt = true}
 
