@@ -1,8 +1,8 @@
 ```
-   _..._                             
- .'   (_`.    _                         __     ___           
-:  .      :  | |   _   _ _ __   __ _ _ _\ \   / (_)_ __ ___  
-:)    ()  :  | |  | | | | '_ \ / _` | '__\ \ / /| | '_ ` _ \ 
+   _..._
+ .'   (_`.    _                         __     ___
+:  .      :  | |   _   _ _ __   __ _ _ _\ \   / (_)_ __ ___
+:)    ()  :  | |  | | | | '_ \ / _` | '__\ \ / /| | '_ ` _ \
 `.   .   .'  | |__| |_| | | | | (_| | |   \ V / | | | | | | |
   `-...-'    |_____\__,_|_| |_|\__,_|_|    \_/  |_|_| |_| |_|
 ```
@@ -20,36 +20,39 @@ Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-squ
 
 # Table of contents
 
+- [Table of contents](#table-of-contents)
 - [What’s included?](#whats-included)
-  * [Why do I want tree-sitter and LSP?](#why-do-i-want-tree-sitter-and-lsp)
+  - [Why do I want tree-sitter and LSP?](#why-do-i-want-tree-sitter-and-lsp)
 - [Project Goals](#project-goals)
 - [Install In One Command!](#install-in-one-command)
-  * [Get the latest version of Neovim](#get-the-latest-version-of-neovim)
+  - [Get the latest version of Neovim](#get-the-latest-version-of-neovim)
 - [Getting started](#getting-started)
-  * [Home screen](#home-screen)
-  * [Leader and Whichkey](#leader-and-whichkey)
-  * [Important Configuration files](#important-configuration-files)
+  - [Home screen](#home-screen)
+  - [Leader and Whichkey](#leader-and-whichkey)
+  - [Other key bindings](#other-key-bindings)
+  - [Important Configuration files](#important-configuration-files)
 - [Install your own plugins](#install-your-own-plugins)
-  * [An example installation of the colorizer plugin](#an-example-installation-of-the-colorizer-plugin)
-  * [Finding plugins](#finding-plugins)
+  - [An example installation of the colorizer plugin](#an-example-installation-of-the-colorizer-plugin)
+  - [Finding plugins](#finding-plugins)
 - [Using Packer](#using-packer)
-  * [Packer commands](#packer-commands)
-  * [Packer reports missing plugins](#packer-reports-missing-plugins)
+  - [Packer reports missing plugins](#packer-reports-missing-plugins)
 - [Clipboard Support](#clipboard-support)
 - [LSP](#lsp)
-  * [Lsp errors](#lsp-errors)
-    + [Understanding LspInfo](#understanding-lspinfo)
-    + [Example configurations](#example-configurations)
-  * [Last resort](#last-resort)
+  - [Lsp errors](#lsp-errors)
+    - [Understanding LspInfo](#understanding-lspinfo)
+    - [Example configurations](#example-configurations)
+    - [Last resort](#last-resort)
 - [Useful Programs](#useful-programs)
 - [EFM server](#efm-server)
 - [Formatters and Linters](#formatters-and-linters)
 - [De-bugging](#de-bugging)
 - [VSCodium](#vscodium)
-- [Color Schemes](#color-schemes)
-  * [Available colorschemes](#available-colorschemes)
-  * [Switching colors](#switching-colors)
-- [Useful commands for
+- [Color schemes](#color-schemes)
+  - [Available colorschemes:](#available-colorschemes)
+  - [Switching colors](#switching-colors)
+- [Useful commands for troubleshooting](#useful-commands-for-troubleshooting)
+- [Uninstalling](#uninstalling)
+- [TODO](#todo)
   troubleshooting](#useful-commands-for-troubleshooting)
 - [Uninstalling](#uninstalling)
 - [TODO](#todo)
@@ -96,7 +99,7 @@ in lua.
 Make sure you have the newest version of Neovim (0.5).
 
 ``` bash
-bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/master/utils/installer/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/tuto193/lunarvim/master/utils/installer/install.sh)
 ```
 
 After installation run `nvim` and then `:PackerInstall`
@@ -181,7 +184,7 @@ provided keymappings file. Follow the lua guide available
 
 # Install your own plugins
 
-The steps for configuring your own plugin are: 
+The steps for configuring your own plugin are:
 1. Add the plugin to `plugins.lua`
 2. If the plugin requires configuration, create a configuration file for it
 3. If you created a configuration, require the file in `init.lua`
@@ -309,10 +312,10 @@ says ‘No client connected’ use :LspInfo to troubleshoot.
     clients means lsp is not running
 2.  Active clients are clients in other files you have open
 3.  Clients that match the filetype will be listed. If installed with
-    :LspInstall <servername> the language servers will be installed.  
+    :LspInstall <servername> the language servers will be installed.
 4.  ‘cmd’ must be populated. This is the language server executable. If
     the ‘cmd’ isn’t set or if it’s not executable you won’t be able to
-    run the language server.  
+    run the language server.
     \* In the example below ‘efm-langserver’ is the name of the binary
     that acts as the langserver. If we run ‘which efm-langserver’ and we
     get a location to the executable, it means the langauge server is
@@ -324,7 +327,7 @@ says ‘No client connected’ use :LspInfo to troubleshoot.
     e.g. python-ls.lua \* ‘identified root’ must also be populated. Most
     language servers require you be inside a git repository for the root
     to be detected. If you don’t want to initialize the directory as a
-    git repository, an empty .git/ folder will also work.  
+    git repository, an empty .git/ folder will also work.
 5.  Some language servers get set up on a per project basis so you may
     have to reinstall the language server when you move to a different
     project.

@@ -26,7 +26,7 @@ installnodearch() {
 }
 
 installnodefedora() {
-    sudo dnf install -y nodejs 
+    sudo dnf install -y nodejs
     sudo dnf install -y npm
 }
 
@@ -79,7 +79,7 @@ installpacker() {
 
 cloneconfig() {
 	echo "Cloning LunarVim configuration"
-	git clone https://github.com/ChristianChiarulli/lunarvim.git ~/.config/nvim
+	git clone https://github.com/tuto193/lunarvim.git ~/.config/nvim
 	# mv $HOME/.config/nvim/init.lua $HOME/.config/nvim/init.lua.tmp
 	# mv $HOME/.config/nvim/utils/init.lua $HOME/.config/nvim/init.lua
 	nvim -u $HOME/.config/nvim/init.lua +PackerInstall
